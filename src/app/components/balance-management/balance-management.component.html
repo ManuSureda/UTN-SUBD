@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="u-expanded-width-xs u-form u-form-1">
-        <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+        <form [formGroup]="balanceForm" (ngSubmit)="onSubmit()" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
           <div class="u-form-group u-form-name">
             <label for="name-ad8d" class="u-custom-font u-font-montserrat u-label">Tarjeta de credito</label>
             <input type="text" placeholder="ej: 2425 3223 1234 4321" id="name-ad8d" name="creditCardNumber" class="u-border-grey-15 u-custom-font u-font-montserrat u-grey-5 u-input u-input-rectangle u-radius-8" required="">

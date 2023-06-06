@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-balance-management',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceManagementComponent implements OnInit {
 
+  balanceForm = new FormGroup({
+
+  })
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    
   }
 
 }
