@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from '../../services/login.service';
+import { LoginCredential } from 'src/app/models/login-credential';
 
 @Component({
   selector: 'app-login',
@@ -9,22 +11,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    userEmail: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   })
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
-  get email() { return this.loginForm.get('email') }
+  get userEmail() { return this.loginForm.get('userEmail') }
   get password() { return this.loginForm.get('password') }
 
   ngOnInit(): void {
   }
 
   login(){
-    console.log(this.email.value);
+    console.log(this.userEmail.value);
     console.log(this.password.value);
     
+    const logrinCredentials = new LoginCredential(this.userEmail.value, this.password.value);
+
+    console.log("entro en login (component)");
+    
+    this.loginService.login(logrinCredentials);
   }
 
 }

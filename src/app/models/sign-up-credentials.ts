@@ -1,5 +1,5 @@
 export class SignUpCredentials {
-    email: string;
+    userEmail: string;
     password: string;
     name: string;
     lastName: string;
@@ -10,10 +10,10 @@ export class SignUpCredentials {
     obraSocial: string;
     plan: string;
 
-    constructor(email: string,password: string,name: string,lastName: string,emergencyContact: string,
+    constructor(userEmail: string,password: string,name: string,lastName: string,emergencyContact: string,
         province: string,city: string,zipCode: string,obraSocial: string,plan: string
     ) {
-        this.email = email;
+        this.userEmail = userEmail;
         this.password = password;
         this.name = name;
         this.lastName = lastName;

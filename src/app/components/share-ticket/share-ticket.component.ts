@@ -17,4 +17,8 @@ export class ShareTicketComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  shareTicket() {
+    
+  }
+
 }
